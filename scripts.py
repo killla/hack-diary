@@ -24,8 +24,8 @@ def fix_marks(name):
 def remove_chastisements(name):
     child = find_child(name)
     if child:
-        all_chastisement = Chastisement.objects.filter(schoolkid=child)
-        all_chastisement.delete()
+        chastisements = Chastisement.objects.filter(schoolkid=child)
+        chastisements.delete()
         print('Замечания устранены.')
 
 def create_commendation(name, subject):
